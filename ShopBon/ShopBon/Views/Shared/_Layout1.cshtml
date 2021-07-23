@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=3332707726956028&autoLogAppEvents=1" nonce="1zcbI6Vk"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=3332707726956028&autoLogAppEvents=1" nonce="1zcbI6Vk"></script>
     <script>
 
         function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
@@ -55,7 +55,7 @@
                 document.getElementById('status').innerHTML =
                     'Thanks for logging in, ' + response.name + '!';
             });
-    
+
         }
 
     </script>
@@ -74,13 +74,13 @@
 
                 <form class="navbar-form navbar-left">
                     <div class="form-group">
-                        <input style="width:450px" type="text" class="form-control" placeholder="Nhập Từ KHóa Cần Tìm">
+                        <input style="width:450px" type="text" class="form-control" placeholder="Nhập từ khóa cần tìm">
                     </div>
                     <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
                 </form>
             </div>
             <div style="margin-top:80px" class="col-md-2">
-                <a style="width: 180px; height: 30px" class="btn btn-danger"><i class="fas fa-phone">Hotline:0932045603</i></a>
+                <a style="width: 180px; height: 30px" class="btn btn-danger"><i class="fas fa-phone">Hotline: 0932045603</i></a>
             </div>
             <div style="margin-top:80px" class="col-md-2">
                 <a style="color:tomato"><i class="fas fa-shopping-cart"></i>@Html.Action("GioHangPartial", "GioHang")</a>
@@ -129,13 +129,58 @@
     </section>
     <section id="maincontent">
     </section>
-    <section id="footer">
-    </section>
-    <section id="copyright">
-    </section>
-
     @RenderBody()
+    <section id="footer" class="footer">
+        <div class="zalo-chat-widget" data-oaid="2621724446363638657" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>
 
+        <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+        <div class="container">
+            <div class="ro">
+                <img src="~/Public/Images/logo/logoNH.jpg" />
+            </div>
+            <div class="ro">
+                <h4 style="text-align:center">Trang web được hợp tác phát hành bởi Nhóm 2 lớp 18DTHC6 và shop nước hoa Bon <br />Văn phòng đại diện: 475A Điện Biên Phủ, phường 25, quận Bình Thạnh, thành phố Hồ Chí Minh, Việt Nam.<br />Điện thoại: 0378 105 127 - 0932 045 603</h4>
+            </div>
+
+            <div class="ro">
+                <a href="https://www.facebook.com/trungbut.nguyen" class="social-links">Facebook</a>
+                <a href="https://www.youtube.com" class="social-links">Youtube</a>
+                <a href="https://www.daotao.hutech.edu.vn" class="social-links">Điều khoản dịch vụ</a>
+                <a href="https://thayphet.net/" class="social-links">Trung tâm hỗ trợ</a>
+            </div>
+            @*<div class="ro">
+                <img src="images/warning.png" />
+            </div>*@
+            <hr />
+            <h4 style="text-align:center">copyright 2021 - Nhom 2_ Nuoc hoa Bon</h4>
+        </div>
+    </section>
+    
+    @*<section id="copyright" class="copyright" style="text-align:center">
+    </section>*@
+
+
+    <style>
+        a {
+            text-decoration: none;
+            color: #d2b48c;
+            font-weight: 600;
+            font-size: larger;
+        }
+
+        .footer {
+            background: #2E3639;
+            color: #8a8a8a;
+            font-size: 14px;
+            padding: 60px 0 20px;
+        }
+
+        .social-links {
+            text-align: center;
+            padding: 5px;
+            margin: 20px;
+        }
+    </style>
 
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 

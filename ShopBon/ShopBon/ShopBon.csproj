@@ -186,6 +186,10 @@
     <Content Include="Public\Images\Asdaaf ameerat al arab for men.jpg" />
     <Content Include="Public\Images\Asdaaf Ameerat Al Arab for Women EDP 100ml.jpg" />
     <Content Include="Public\Images\ban-nuoc-hoa-xach-tay4.jpg" />
+    <Content Include="Public\Images\Banner1.jpg" />
+    <Content Include="Public\Images\Banner2.png" />
+    <Content Include="Public\Images\Banner3.jpg" />
+    <Content Include="Public\Images\Banner5.jpg" />
     <Content Include="Public\Images\Christian Louboutin Loubicrown EDP 90ml.jpg" />
     <Content Include="Public\Images\Christian Louboutin Loubirouge EDP 90ml.jpg" />
     <Content Include="Public\Images\DSQUARED2 Green Wood Men.jpg" />
@@ -198,14 +202,22 @@
     <Content Include="Public\Images\Lattafa Malik Al Tayoor ConCentrated EDP 100ml.jpg" />
     <Content Include="Public\Images\Lattafa Malik Al Tayoor EDP 100ML.jpg" />
     <Content Include="Public\Images\Lattafa Mazaaji EDP 100ml.jpg" />
+    <Content Include="Public\Images\logo\burberry-logo.png" />
+    <Content Include="Public\Images\logo\Bvlgari_logo.png" />
+    <Content Include="Public\Images\logo\ck_logo.jpg" />
+    <Content Include="Public\Images\logo\Gucci-Emblem.jpg" />
     <Content Include="Public\Images\logo\logoNH.jpg" />
+    <Content Include="Public\Images\logo\Versace-Logo.png" />
     <Content Include="Public\Images\Maison Margiela Replica Springtime In A Park 100ml.jpg" />
     <Content Include="Public\Images\Marc Jacobs Daisy Love Eau So Sweet EDT 100ml.jpg" />
     <Content Include="Public\Images\Narciso Rodriguez For Her Musc Noir EDP 100ml.jpg" />
     <Content Include="Public\Images\Nautica Classic EDT.jpg" />
+    <Content Include="Public\Images\NguyenTrungBut1.jpg" />
     <Content Include="Public\Images\Pepe Jeans Celebrate Men EDP 100ml.jpg" />
     <Content Include="Public\Images\Thierry Mugle Alien Man.jpg" />
     <Content Include="Public\Images\Tom Ford Rose Prick EDP 50ml.jpg" />
+    <Content Include="Public\Images\users\NguyenTrungBut1.jpg" />
+    <Content Include="Public\Images\users\tung.jpg" />
     <Content Include="Public\Images\Versace Pour Femme Dylan Turquoise 100ml.jpg" />
     <Content Include="Public\webfonts\fa-brands-400.svg" />
     <Content Include="Public\webfonts\fa-regular-400.svg" />
@@ -364,6 +376,7 @@
     <Content Include="Views\Admin\ChiTietSanPham.cshtml" />
     <Content Include="Views\Admin\Xoa.cshtml" />
     <Content Include="Views\Admin\Sua.cshtml" />
+    <Content Include="Views\Site\SlideShow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,6 +5,68 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
+<style>
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    .ratings .fa {
+        color: #ff523b;
+        left: 50%;
+    }
+
+    /* .rate {
+        float: left;
+        height: 46px;
+        padding: 0 10px;
+    }
+
+        .rate:not(:checked) > input {
+            position: absolute;
+            top: -9999px;
+        }
+
+        .rate:not(:checked) > label {
+            float: right;
+            width: 1em;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 30px;
+            color: #ccc;
+        }
+
+            .rate:not(:checked) > label:before {
+                content: '★ ';
+            }
+
+        .rate > input:checked ~ label {
+            color: #ffc700;
+        }
+
+        .rate:not(:checked) > label:hover,
+        .rate:not(:checked) > label:hover ~ label {
+            color: #deb217;
+        }
+
+        .rate > input:checked + label:hover,
+        .rate > input:checked + label:hover ~ label,
+        .rate > input:checked ~ label:hover,
+        .rate > input:checked ~ label:hover ~ label,
+        .rate > label:hover ~ input:checked ~ label {
+            color: #c59b08;
+        }*/
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<div class="row">
+    @Html.Action("SlideShow", "Site")
+</div>
+
+<h2 class="title">Sản phẩm nổi bật</h2>
 
 <div class="row">
     @foreach (var product in Model)
@@ -22,28 +84,189 @@
                     <p></p>
 
                 </div>
-                <div class="ratings">
-                    <p class="pull-right">15 review</p>
+                <div class="ratings" style="text-align:center">
                     <p>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star-half-o"></span>
                     </p>
                 </div>
+                @*<div class="rate">
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                    </div>*@
             </div>
         </div>
 
     }
-    
+
 </div>
-Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount;
-<div class="MenuTrang">
-    @Html.PagedListPager(Model,page => Url.Action("Index",new { page = page }))
+
+<div class="MenuTrang" style="text-align:center">
+    <h3 style="text-align:center">Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount: @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))</h3>
 </div>
+
+<h2 class="title">Nhận xét của khách hàng</h2>
+
+<div class="row">
+    <div class="col-sm-4 col-lg-4 col-md-4" style="text-align:center">
+        <div class="feedback">
+            <i class="fa fa-quote-left"></i>
+            <p>
+                Sản phẩm mùi thơm dễ chịu, hàng chính hãng. Shop hỗ trợ rất nhiệt tình tuy nhiên hộp hàng lúc giao hơi trầy xước một tí
+            </p>
+            <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+            <img src="./images/user-1.png" />
+            <h3>Phạm Văn Duy</h3>
+        </div>
+    </div>
+    <div class="col-sm-4 col-lg-4 col-md-4" style="text-align:center">
+        <div class="feedback">
+            <i class="fa fa-quote-left"></i>
+            <p>
+                Hàng ngon trong tầm giá, nước hoa giữ mùi thơm lâu. Ship rất nhanh và hướng dẫn sử dụng rất kỹ càng.
+            </p>
+            <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <img src="~/Public/Images/users/NguyenTrungBut1.jpg" />
+            <h3>Nguyễn Trung Bút</h3>
+        </div>
+    </div>
+    <div class="col-sm-4 col-lg-4 col-md-4" style="text-align:center">
+        <div class="feedback">
+            <i class="fa fa-quote-left"></i>
+            <p>
+                Sản phẩm như cặc
+            </p>
+            <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <img src="~/Public/Images/users/tung.jpg" />
+            <h3>Nguyễn Như Tùng</h3>
+            </div>
+        </div>
+    </div>
+
+<h2 class="title">Các Nhãn Hàng Nước Hoa Có Tại Shop</h2>
+<div class="ro">
+        <div class="col-5" style="text-align:center">
+            <img src="~/Public/Images/logo/burberry-logo.png">
+        
+        </div>
+
+        <div class="col-5" style="text-align:center">
+            <img src="~/Public/Images/logo/Bvlgari_logo.png">
+        </div>
+
+        <div class="col-5" style="text-align:center">
+            <img src="~/Public/Images/logo/ck_logo.jpg">
+        </div>
+
+        <div class="col-5" style="text-align:center">
+            <img src="~/Public/Images/logo/Gucci-Emblem.jpg">
+        </div>
+
+        <div class="col-5" style="text-align:center">
+            <img src="~/Public/Images/logo/Versace-Logo.png">
+        </div>
+    </div>
+
+
 <style>
-    .MenuTrang li{
-        display:inline;
+    .MenuTrang li {
+        display: inline;
     }
+
+    .ro {
+        margin-top:10px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .col-5 {
+        width: 160px;
+    }
+
+        .col-5 img {
+            width: 100%;
+            cursor: pointer;
+            filter: grayscale(100%);
+        }
+
+            .col-5 img:hover {
+                filter: grayscale(0);
+            }
+
+    .title {
+        text-align: center;
+        margin-bottom:30px;
+        margin-top:100px;
+        position: relative;
+        line-height: 60px;
+        color: #555;
+    }
+
+        .title::after {
+            content: "";
+            background: #ff523b;
+            width: 200px;
+            height: 5px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    .col-md-4:hover {
+        transform: translateY(-3px);
+    }
+    .feedback {
+        /*flex-basis: 25%;*/
+        padding: 10px;
+        min-width: 200px;
+        margin-bottom: 50px;
+        transition: transform 0.6s;
+    }
+
+        .feedback:hover {
+            transform: translateY(-5px);
+        }
+
+    .fa.fa-quote-left {
+        font-size: 34px;
+        color: #ff523b;
+    }
+
+     .feedback img {
+        width: 50px;
+        margin-top: 20px;
+        border-radius: 50%;
+    }
+   
 </style>

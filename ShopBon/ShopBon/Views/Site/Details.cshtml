@@ -24,11 +24,10 @@
             <img src="~/Public/Images/@Model.Img" width="100%" />
         </div>
         <div style="width:60%;float:left;padding:10px">
-            <h4 style="font-weight:bold;color:red">Tên Sách @Model.Name</h4>
-            <p style="text-align:justify"><span style="font-weight:bold">Mô Tả</span>@Model.Detail</p>
+            <h4 style="font-weight:bold;color:red">Tên sản phẩm: @Model.Name</h4>
             <p style="font-weight:bold">Giá Bán:<span style="color:red;font-size:16pt">@Model.PriceBuy</span></p>
+            <p style="text-align:justify"><span style="font-weight:bold">Mô tả</span>@Model.Detail</p>
 
-          
         </div>
         <div id="datmua">
             <a href="@Url.Action("ThemGioHang","GioHang",new { @iMaSanPham = Model.Id, @strURL = Request.Url.ToString()  })" >Đặt Mua</a>

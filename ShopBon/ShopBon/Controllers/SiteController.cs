@@ -16,6 +16,10 @@ namespace ShopBon.Controllers
         {
             return db.Products.OrderByDescending(a => a.Created_At).Take(count).ToList();
         }
+        private List<Slider> LaySlideMoi(int count)
+        {
+            return db.Sliders.OrderByDescending(a => a.Created_At).Take(count).ToList();
+        }
         // GET: Site
         public ActionResult Index(int ? page)
         {
@@ -66,7 +70,13 @@ namespace ShopBon.Controllers
 
            
         }
+        
+        public ActionResult SlideShow(int? count)
+        {
 
+            var slide = LaySlideMoi(4);
+            return PartialView(slide);
+        }
 
     }
 }

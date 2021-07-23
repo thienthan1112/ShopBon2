@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Bon" Class="dbShopBonDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-94IGQTP\SQLEXPRESS;Initial Catalog=Bon;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BonConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-GE10G3F\SQLEXPRESS;Initial Catalog=Bon;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BonConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Admin" Member="Admins">
     <Type Name="Admin">
       <Column Name="UserAdmin" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
