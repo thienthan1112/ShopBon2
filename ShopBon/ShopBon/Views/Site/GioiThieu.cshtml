@@ -1,12 +1,8 @@
 ﻿@using ShopBon.Models
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "GioiThieu";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
 }
-@{
-    User kh = (User)Session["UserName"];
-}
-@Html.ValidationSummary(true)
 <div class="post-content">
     <h2 class="title">GIỚI THIỆU VỀ <br />SHOP BON</h2>
     <hr />
@@ -29,7 +25,7 @@
     <br />
     <v>Đa dạng hóa thương hiệu là định hướng phát triển trong tương lai của Công ty Cổ phần Thương mại <strong>Shop Bon</strong>. Không chỉ là nước hoa mà các thương hiệu, sản phẩm thuộc lĩnh vực mỹ phẩm như chăm sóc da, trang điểm, Công ty Cổ phần Thương mại <strong>Shop Bon</strong> đều muốn tìm tòi, tiếp cận, đánh giá chất lượng, chọn lọc và phân phối tại thị trường Việt Nam, tạo điều kiện cho người tiêu dùng Việt tiếp cận thêm nhiều thương hiệu đẳng cấp.</v>
     <br />
-    <br />
+    <br/>
     <v><strong style="color:darkred; text-align:center">HOTLINE: 1900 xxxx (Miễn Phí)</strong></v>
     <hr />
 </div>
@@ -59,15 +55,14 @@
 
 
     v {
-        color: #555;
+        color:#555;
         margin-bottom: 20px;
-        font-size: large;
+        font-size:large;
     }
-
     .post-content {
-        text-align: center;
-        margin-left: 200px;
-        margin-right: 200px;
+        text-align:center;
+        margin-left:200px;
+        margin-right:200px;
         display: block;
         overflow: hidden;
         word-wrap: break-word;
@@ -76,6 +71,7 @@
         line-height: 24px;
     }
 
-        .post-content img {
-        }
+    .post-content img{
+        
+    }
 </style>

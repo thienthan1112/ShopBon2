@@ -5,8 +5,10 @@
     ViewBag.Title = "SanPhamTheoLoai";
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<h3 style="text-align:center;color:red">Sản Phẩm Theo Chủ Đề</h3>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<h2 class="title">Sản Phẩm Theo Chủ Đề</h2>
 <div class="row">
     @foreach (var item in Model)
     {
@@ -22,11 +24,11 @@
                     </h4>
                     <p></p>
                 </div>
-                <div class="ratings">
+                <div class="ratings" style="text-align:center">
                     <span class="fa fa-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
                     <span class="fa fa-star-o"></span>
                 </div>
             </div>
@@ -34,4 +36,35 @@
     }
 </div>
 
+<style>
+    .title {
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 100px;
+        position: relative;
+        line-height: 60px;
+        color: #555;
+    }
+
+        .title::after {
+            content: "";
+            background: #ff523b;
+            width: 200px;
+            height: 5px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    .col-md-4:hover {
+        transform: translateY(-3px);
+    }
+
+    .ratings .fa {
+        color: #ff523b;
+        left: 50%;
+    }
+</style>
 

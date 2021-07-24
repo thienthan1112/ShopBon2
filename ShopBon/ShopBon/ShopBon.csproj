@@ -212,7 +212,6 @@
     <Content Include="Public\Images\Marc Jacobs Daisy Love Eau So Sweet EDT 100ml.jpg" />
     <Content Include="Public\Images\Narciso Rodriguez For Her Musc Noir EDP 100ml.jpg" />
     <Content Include="Public\Images\Nautica Classic EDT.jpg" />
-    <Content Include="Public\Images\NguyenTrungBut1.jpg" />
     <Content Include="Public\Images\Pepe Jeans Celebrate Men EDP 100ml.jpg" />
     <Content Include="Public\Images\Thierry Mugle Alien Man.jpg" />
     <Content Include="Public\Images\Tom Ford Rose Prick EDP 50ml.jpg" />
@@ -220,6 +219,7 @@
     <Content Include="Public\Images\users\But.jpg" />
     <Content Include="Public\Images\users\Tung.jpg" />
     <Content Include="Public\Images\Versace Pour Femme Dylan Turquoise 100ml.jpg" />
+    <Content Include="Public\Images\versace.jpg" />
     <Content Include="Public\webfonts\fa-brands-400.svg" />
     <Content Include="Public\webfonts\fa-regular-400.svg" />
     <Content Include="Public\webfonts\fa-solid-900.svg" />
@@ -378,6 +378,7 @@
     <Content Include="Views\Admin\Xoa.cshtml" />
     <Content Include="Views\Admin\Sua.cshtml" />
     <Content Include="Views\Site\SlideShow.cshtml" />
+    <Content Include="Views\Site\GioiThieu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

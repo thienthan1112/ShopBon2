@@ -129,7 +129,7 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Link</a></li>
+                        <li><a href="@Url.Action("GioiThieu", "Site")">Giới Thiệu</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Thành Viên @Html.Action("Menu", "Site") <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -152,14 +152,14 @@
 
         <script src="https://sp.zalo.me/plugins/sdk.js"></script>
         <div class="container">
-            <div class="ro">
+            <div class="ro" style="text-align:center">
                 <img src="~/Public/Images/logo/logoNH.jpg" />
             </div>
             <div class="ro">
                 <h4 style="text-align:center">Trang web được hợp tác phát hành bởi Nhóm 2 lớp 18DTHC6 và shop nước hoa Bon <br />Văn phòng đại diện: 475A Điện Biên Phủ, phường 25, quận Bình Thạnh, thành phố Hồ Chí Minh, Việt Nam.<br />Điện thoại: 0378 105 127 - 0932 045 603</h4>
             </div>
 
-            <div class="ro">
+            <div class="ro" style="text-align:center">
                 <a href="https://www.facebook.com/trungbut.nguyen" class="social-links">Facebook</a>
                 <a href="https://www.youtube.com" class="social-links">Youtube</a>
                 <a href="https://www.daotao.hutech.edu.vn" class="social-links">Điều khoản dịch vụ</a>
@@ -178,6 +178,9 @@
 
 
     <style>
+        .zalo-chat-widget{
+            cursor:pointer;
+        }
         a {
             text-decoration: none;
             color: #d2b48c;

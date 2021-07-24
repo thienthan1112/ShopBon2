@@ -14,12 +14,25 @@ namespace ShopBon.Controllers
     {
         dbShopBonDataContext db = new dbShopBonDataContext();
         // GET: Admin
+        [HttpGet]
+        public ActionResult Index()
+        {
+            if (Session["UserAdmin"] == null || Session["UserAdmin"].ToString() == "")
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            return View();
+
+        }
+
         public ActionResult Index()
         {
             return View();
         }
+
         public ActionResult Product(int ?page)
         {
+            
             int pageNumber = (page ?? 1);
             int pageSize = 7;
             return View(db.Products.ToList().OrderBy(n => n.Id).ToPagedList(pageNumber, pageSize));
@@ -58,6 +71,7 @@ namespace ShopBon.Controllers
         [HttpGet]
         public ActionResult ThemMoi()
         {
+
             ViewBag.CatId = new SelectList(db.Categories.ToList().OrderBy(n => n.Name), "Id", "Name");
 
 

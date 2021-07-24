@@ -78,5 +78,10 @@ namespace ShopBon.Controllers
             return PartialView(slide);
         }
 
+
+        public ActionResult GioiThieu()
+        {
+            return View();
+        }
     }
 }
