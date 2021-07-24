@@ -119,8 +119,12 @@ namespace ShopBon.Controllers
             }
             return View();
         }
-       
-       
-        
+
+        public ActionResult DangXuat()
+        {
+            Session["UserName"] = null;
+            return View("DangNhap");
+        }
+
     }
 }

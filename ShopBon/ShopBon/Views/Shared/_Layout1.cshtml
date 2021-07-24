@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using ShopBon.Models
+<!DOCTYPE html>
 <html>
 <head>
     <title>@ViewBag.Title</title>
@@ -68,7 +69,7 @@
         <div class="container">
 
             <div class="col-md-2 logo">
-                <a href="@Url.Action("Index","Site")"><img src="~/Public/Images/logo/logoNH.jpg" class="img-circle" /></a>
+                <a href="@Url.Action("Index", "Site")"><img src="~/Public/Images/logo/logoNH.jpg" class="img-circle" /></a>
             </div>
             <div style="margin-top:70px" class="col-md-6 ">
 
@@ -84,6 +85,22 @@
             </div>
             <div style="margin-top:80px" class="col-md-2">
                 <a style="color:tomato"><i class="fas fa-shopping-cart"></i>@Html.Action("GioHangPartial", "GioHang")</a>
+            </div>
+            <div style="margin-top:80px" class="col-md-2">
+                @{User kh = (User)Session["UserName"];
+
+                    if (kh == null)
+                    {
+                        <p style="color:black">Bạn chưa đăng nhập</p>
+                    }
+
+                    else
+                    {
+                        <p style="color:black">Xin chào: @kh.UserName</p>
+                        <p style="color:red">@Html.ActionLink("(Thoát)","DangXuat","NguoiDung")</p>
+                    }
+                 }
+
             </div>
         </div>
 
@@ -149,15 +166,15 @@
                 <a href="https://thayphet.net/" class="social-links">Trung tâm hỗ trợ</a>
             </div>
             @*<div class="ro">
-                <img src="images/warning.png" />
-            </div>*@
+                    <img src="images/warning.png" />
+                </div>*@
             <hr />
             <h4 style="text-align:center">copyright 2021 - Nhom 2_ Nuoc hoa Bon</h4>
         </div>
     </section>
-    
+
     @*<section id="copyright" class="copyright" style="text-align:center">
-    </section>*@
+        </section>*@
 
 
     <style>
